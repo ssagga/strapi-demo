@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "name": "article"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "text",
+      "required": true
+    },
+    "article_categories": {
+      "collection": "article-category",
+      "via": "articles",
+      "dominant": true
+    }
+  }
+}
